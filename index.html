@@ -21,6 +21,34 @@
     <title>AME-PARTS — доставка автомобилей из Европы</title>
   </head>
   <body>
+    <div class="modal-overlay" id="premiumModal">
+      <div class="modal-box">
+        <!-- LEFT IMAGE -->
+        <div class="modal-image">
+          <img
+            src="https://i.ytimg.com/vi/SnsiBG88f-M/maxresdefault.jpg"
+            alt=""
+          />
+        </div>
+
+        <!-- RIGHT FORM -->
+        <div class="modal-content">
+          <button class="modal-close" onclick="closeModal()">×</button>
+
+          <h3>Оставить заявку</h3>
+          <p>Заполните форму и мы свяжемся с вами в ближайшее время</p>
+
+          <form>
+            <input type="text" placeholder="Ваше имя" required />
+            <input type="tel" placeholder="Телефон" required />
+            <input type="email" placeholder="Email" />
+            <textarea placeholder="Комментарий"></textarea>
+
+            <button type="submit" class="btn-premium">Отправить заявку</button>
+          </form>
+        </div>
+      </div>
+    </div>
     <header>
       <div class="container">
         <div class="header-top">
@@ -143,6 +171,7 @@
               <li class="none"><a href="/blogs.html">Стати</a></li>
               <li><a href="/catalog.html">Каталог</a></li>
               <li><a href="/reviews.html">Отзывы</a></li>
+              <li><a href="/works.html">Как мы работаем</a></li>
               <li><a href="/team.html">Команда</a></li>
               <li><a href="/faq.html">FAQ</a></li>
               <li><a href="/contact.html">Контакты</a></li>
@@ -250,13 +279,11 @@
               <span class="delivery-map__label">
                 <i></i> ЛОГИСТИКА И МАРШРУТ
               </span>
-              <h2 id="delivery-map-title">
-                Доставка автомобилей из Европы
-              </h2>
+              <h2 id="delivery-map-title">Доставка автомобилей из Европы</h2>
               <p class="delivery-map__lead">
                 Забираем авто в стране покупки и везём до согласованной точки в
-                России — с понятным маршрутом, сроками и сопровождением на каждом
-                этапе.
+                России — с понятным маршрутом, сроками и сопровождением на
+                каждом этапе.
               </p>
               <ul class="delivery-map__list">
                 <li>Подбор и выкуп в ЕС, оформление экспорта</li>
@@ -437,7 +464,7 @@
 
                     <div class="car-bottom">
                       <p class="price">2 000 000 ₽ <span>под ключ</span></p>
-                      <a href="#" class="btn-car">ПОДРОБНЕЕ</a>
+                      <a href="/carinner.html" class="btn-car">ПОДРОБНЕЕ</a>
                     </div>
                   </div>
                 </div>
@@ -927,7 +954,7 @@
               </div>
             </div>
           </div>
-          <a href="/" class="btn-premium">
+          <a href="/catalog.html" class="btn-premium">
             <span>Все автомобили</span>
             <i class="btn-icon"> → </i>
           </a>
@@ -1191,8 +1218,8 @@
               </div>
               <h4>Логистика и таможня</h4>
               <p>
-                Организуем перевозку из страны покупки до пункта выдачи и помогаем
-                с документами, чтобы вы получили авто без лишней суеты.
+                Организуем перевозку из страны покупки до пункта выдачи и
+                помогаем с документами, чтобы вы получили авто без лишней суеты.
               </p>
             </div>
 
@@ -1228,7 +1255,7 @@
             <!-- CTA CARD -->
             <div class="why-cta">
               <h3>Закажите доставку авто из Европы</h3>
-              <a href="#" class="btn-premium">РАССЧИТАТЬ СТОИМОСТЬ</a>
+              <a href="#" onclick="openModal(); return false;" class="btn-premium">РАССЧИТАТЬ СТОИМОСТЬ</a>
             </div>
           </div>
         </div>
@@ -1306,8 +1333,10 @@
                   />
                   <div class="blog-content">
                     <h3>Как выбрать авто в Европе</h3>
-                    <p>На что смотреть при покупке и проверке перед доставкой</p>
-                    <a href="/blogs.html">ЧИТАТЬ</a>
+                    <p>
+                      На что смотреть при покупке и проверке перед доставкой
+                    </p>
+                    <a href="/bloginner.html">ЧИТАТЬ</a>
                   </div>
                 </div>
               </div>
@@ -1345,7 +1374,9 @@
                   />
                   <div class="blog-content">
                     <h3>VIN и история автомобиля</h3>
-                    <p>Как не купить проблемный экземпляр на европейском рынке</p>
+                    <p>
+                      Как не купить проблемный экземпляр на европейском рынке
+                    </p>
                     <a href="/blogs.html">ЧИТАТЬ</a>
                   </div>
                 </div>
@@ -1388,8 +1419,8 @@
               <div class="blog-content">
                 <h3>Аукционы и дилеры в Европе</h3>
                 <p>
-                  Copart, BCA, официальные салоны — где выгоднее покупать под ваш
-                  сценарий
+                  Copart, BCA, официальные салоны — где выгоднее покупать под
+                  ваш сценарий
                 </p>
                 <a href="/blogs.html">ЧИТАТЬ</a>
               </div>
@@ -1665,74 +1696,17 @@
                 <i></i> ВОПРОСЫ И ОТВЕТЫ
               </span>
               <h2 class="faq-premium__title">Часто задаваемые вопросы</h2>
-              <p class="faq-premium__lead">
-                Коротко о сроках, деньгах и процессе — без воды. Если не нашли
-                ответ, напишите в Telegram или WhatsApp: ответим в течение дня.
-              </p>
-              <div class="faq-premium__socials" aria-label="Написать в мессенджер">
-                <a
-                  href="https://t.me/BELTEH_AUTO"
-                  class="faq-premium__social"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="Telegram"
-                >
-                  <img
-                    src="/assests/img/telegram.svg"
-                    alt="Telegram"
-                    width="42"
-                    height="42"
-                    loading="lazy"
-                  />
-                </a>
-                <a
-                  href="https://wa.me/79010781358"
-                  class="faq-premium__social"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="WhatsApp"
-                >
-                  <img
-                    src="/assests/img/whatsapp.svg"
-                    alt="WhatsApp"
-                    width="42"
-                    height="42"
-                    loading="lazy"
-                  />
-                </a>
-                <a
-                  href="https://max.ru/u/f9LHodD0cOLooQSi5MJICvFFRmvK6xoSeynxu1sQb5dkpkBOXZMV0gE1Q4w"
-                  class="faq-premium__social"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="MAX"
-                >
-                  <img
-                    src="/assests/img/maxmessencer.png"
-                    alt="MAX"
-                    width="42"
-                    height="42"
-                    loading="lazy"
-                  />
-                </a>
-              </div>
-              <div class="faq-premium__stats">
-                <div class="faq-premium__stat">
-                  <span class="faq-premium__stat-num">24/7</span>
-                  <span class="faq-premium__stat-txt">на связи по сделке</span>
-                </div>
-                <div class="faq-premium__stat">
-                  <span class="faq-premium__stat-num">100%</span>
-                  <span class="faq-premium__stat-txt">прозрачная смета</span>
-                </div>
-              </div>
-              <a href="/faq.html" class="faq-premium__link-all">
-                Полный раздел FAQ
-                <span class="faq-premium__link-arrow">→</span>
-              </a>
+              <img
+                src="https://templatekit.selaraswp.com/rental/wp-content/uploads/sites/44/2025/10/with-cup-of-drink-young-african-american-woman-in-2025-03-18-19-32-03-utc.jpg"
+                alt=""
+              />
             </div>
 
-            <div class="faq-premium__accordion" role="region" aria-label="Частые вопросы">
+            <div
+              class="faq-premium__accordion"
+              role="region"
+              aria-label="Частые вопросы"
+            >
               <div class="faq-premium__item is-open">
                 <button
                   type="button"
@@ -1757,8 +1731,8 @@
                       <p>
                         Итог зависит от цены авто в Европе, логистики, курса и
                         таможенных платежей. Мы заранее собираем смету по вашему
-                        запросу и фиксируем понятные статьи расходов — без скрытых
-                        комиссий.
+                        запросу и фиксируем понятные статьи расходов — без
+                        скрытых комиссий.
                       </p>
                     </div>
                   </div>
@@ -1787,10 +1761,10 @@
                   <div class="faq-premium__panel-inner">
                     <div class="faq-premium__panel">
                       <p>
-                        Обычно от нескольких недель до пары месяцев — в зависимости
-                        от страны покупки, очередей на границе и комплектации
-                        документов. На каждом этапе сообщаем прогноз и фактический
-                        статус.
+                        Обычно от нескольких недель до пары месяцев — в
+                        зависимости от страны покупки, очередей на границе и
+                        комплектации документов. На каждом этапе сообщаем
+                        прогноз и фактический статус.
                       </p>
                     </div>
                   </div>
@@ -1820,8 +1794,8 @@
                     <div class="faq-premium__panel">
                       <p>
                         Да: организуем осмотр, VIN-проверку, при необходимости —
-                        независимую диагностику. Вы получаете фото- и видеоотчёт до
-                        решения о выкупе.
+                        независимую диагностику. Вы получаете фото- и видеоотчёт
+                        до решения о выкупе.
                       </p>
                     </div>
                   </div>
@@ -1851,8 +1825,8 @@
                     <div class="faq-premium__panel">
                       <p>
                         Подготовку и подачу документов, расчёт пошлин, получение
-                        ЭПТС и сопутствующие процедуры в рамках согласованной сметы —
-                        вы видите состав расходов заранее.
+                        ЭПТС и сопутствующие процедуры в рамках согласованной
+                        сметы — вы видите состав расходов заранее.
                       </p>
                     </div>
                   </div>
@@ -1883,8 +1857,8 @@
                       <p>
                         Обычно используем поэтапную схему, привязанную к этапам
                         сделки (подбор, выкуп, доставка, растаможка). Условия
-                        прописываем в договоре — так вы платите по факту выполненных
-                        работ.
+                        прописываем в договоре — так вы платите по факту
+                        выполненных работ.
                       </p>
                     </div>
                   </div>
@@ -1930,10 +1904,10 @@
         <div class="cta-content">
           <h2>Привезём автомобиль из Европы для вас</h2>
           <p>
-            Оставьте заявку — рассчитаем стоимость «под ключ» и подберём оптимальный
-            вариант по срокам и бюджету.
+            Оставьте заявку — рассчитаем стоимость «под ключ» и подберём
+            оптимальный вариант по срокам и бюджету.
           </p>
-          <a href="/" class="btn-premium">
+          <a href="/catalog.html" class="btn-premium">
             <span>СМОТРЕТЬ КАТАЛОГ</span>
             <i class="btn-icon"> → </i>
           </a>
@@ -1978,6 +1952,7 @@
                 <li><a href="/team.html">Команда</a></li>
                 <li><a href="/faq.html">FAQ</a></li>
                 <li><a href="/contact.html">Контакты</a></li>
+                <li><a href="/works.html">Как мы работаем</a></li>
               </ul>
             </nav>
           </div>
@@ -2070,8 +2045,7 @@
           type="button"
           id="wrapperdown"
           class="onlineregistration modalBtn"
-          data-btn="1"
-          data-modal-open=""
+          onclick="openModal(); return false;"
         >
           Заказать звонок
         </button>
@@ -2193,6 +2167,15 @@
           },
         },
       });
+    </script>
+    <script>
+      function openModal() {
+        document.getElementById("premiumModal").classList.add("active");
+      }
+
+      function closeModal() {
+        document.getElementById("premiumModal").classList.remove("active");
+      }
     </script>
   </body>
 </html>

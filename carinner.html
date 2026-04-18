@@ -13,6 +13,10 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+     <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.css"
+    />
     <link
       rel="shortcut icon"
       href="/assests/img/favcn.webp"
@@ -167,14 +171,13 @@
         <div class="container inner-hero-wrap">
           <!-- LEFT CONTENT -->
           <div class="inner-hero-content">
-            <span class="section-label"> <i></i> Услуги </span>
+            <span class="section-label"> <i></i> Каталог </span>
 
-            <h2>
-              Полный спектр услуг по пригону авто из Европы
-            </h2>
+            <h2>Каталог автомобилей из Европы</h2>
 
             <p>
-              От подбора и проверки автомобиля до доставки и постановки на учёт в России — берём на себя весь процесс
+              Актуальные предложения проверенных автомобилей с прозрачной
+              историей и выгодными ценами.
             </p>
           </div>
 
@@ -190,90 +193,455 @@
       <div class="breadcrumb">
         <div class="container">
           <a href="/">Главная</a>
-          <span>/</span> Услуги
+          <span>/</span>
+          <a href="/catalog.html">Каталог</a>
+          <span>/</span> Hyundai Santa Fe 2020
         </div>
       </div>
-
-      <section id="services" class="services">
+      <section class="car-inner">
         <div class="container">
-          <div class="services-grid">
-            <!-- CARD -->
-            <div class="service-card">
-              <div class="service-content">
-                <h4>Подбор авто в Европе</h4>
-                <p>
-                  Мы ищем автомобиль на проверенных европейских площадках:
-                  Mobile.de, AutoScout24, аукционы Copart, BCA и другие.
-                  Учитываем ваш бюджет, предпочтения по марке и комплектации.
-                  Предоставляем несколько вариантов на выбор с полным описанием
-                  и фотографиями.
-                </p>
+          <div class="car-inner-grid">
+            <!-- LEFT (IMAGES) -->
+            <div class="car-gallery">
+              <!-- MAIN IMAGE -->
+              <!-- MAIN IMAGE -->
+              <a
+                href="https://cdn-b.freshauto.ru/f16d331356_1065392_mobile.webp"
+                data-fancybox="gallery"
+                class="main-image"
+              >
+                <img
+                  id="mainImage"
+                  src="https://cdn-b.freshauto.ru/f16d331356_1065392_mobile.webp"
+                />
+                <span class="status">В наличии</span>
+              </a>
 
-                <a href="/serviceinner.html" class="service-link"
-                  >ПОДРОБНЕЕ →</a
+              <!-- THUMBNAILS -->
+              <div class="thumbs">
+                <a
+                  href="https://cdn-b.freshauto.ru/f16d331356_1065392_mobile.webp"
+                  data-fancybox="gallery"
+                  onclick="
+                    event.preventDefault();
+                    changeImage(this.querySelector('img'));
+                  "
+                >
+                  <img
+                    src="https://cdn-b.freshauto.ru/f16d331356_1065392_mobile.webp"
+                  />
+                </a>
+
+                <a
+                  href="https://cdn-b.freshauto.ru/a5b868c564_1065392_mobile.webp"
+                  data-fancybox="gallery"
+                  onclick="
+                    event.preventDefault();
+                    changeImage(this.querySelector('img'));
+                  "
+                >
+                  <img
+                    src="https://cdn-b.freshauto.ru/a5b868c564_1065392_mobile.webp"
+                  />
+                </a>
+
+                <a
+                  href="https://cdn-b.freshauto.ru/2ccddb6ed5_1065392_mobile.webp"
+                  data-fancybox="gallery"
+                  onclick="
+                    event.preventDefault();
+                    changeImage(this.querySelector('img'));
+                  "
+                >
+                  <img
+                    src="https://cdn-b.freshauto.ru/2ccddb6ed5_1065392_mobile.webp"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <!-- RIGHT (INFO) -->
+            <div class="car-info-box">
+              <h1>Hyundai Santa Fe 2020</h1>
+
+              <div class="price-inner">2 000 000 ₽</div>
+
+              <div class="badges">
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    data-lucide="shield-check"
+                    aria-hidden="true"
+                    class="lucide lucide-shield-check"
+                  >
+                    <path
+                      d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                    ></path>
+                    <path d="m9 12 2 2 4-4"></path>
+                  </svg>
+                  VIN проверен</span
+                >
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    data-lucide="file-check"
+                    aria-hidden="true"
+                    class="lucide lucide-file-check"
+                  >
+                    <path
+                      d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"
+                    ></path>
+                    <path d="M14 2v5a1 1 0 0 0 1 1h5"></path>
+                    <path d="m9 15 2 2 4-4"></path>
+                  </svg>
+                  Документы готовы</span
                 >
               </div>
 
-              <div class="service-image">
-                <img src="/assests/img/s1.webp" alt="" />
+              <!-- SPECS GRID -->
+              <div class="specs-grid">
+                <div class="spec">
+                  <span class="icon mileage">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      data-lucide="gauge"
+                      aria-hidden="true"
+                      class="lucide lucide-gauge"
+                    >
+                      <path d="m12 14 4-4"></path>
+                      <path d="M3.34 19a10 10 0 1 1 17.32 0"></path>
+                    </svg>
+                  </span>
+                  <div>
+                    <p>Пробег</p>
+                    <b>69 375 км</b>
+                  </div>
+                </div>
+
+                <div class="spec">
+                  <span class="icon gearbox">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      version="1.1"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      width="512"
+                      height="512"
+                      x="0"
+                      y="0"
+                      viewBox="0 0 512 512"
+                      style="enable-background: new 0 0 512 512"
+                      xml:space="preserve"
+                      class=""
+                    >
+                      <g>
+                        <circle
+                          cx="452"
+                          cy="60"
+                          r="40"
+                          style="
+                            stroke-width: 40;
+                            stroke-linecap: round;
+                            stroke-linejoin: round;
+                            stroke-miterlimit: 10;
+                          "
+                          fill="none"
+                          stroke="#000000"
+                          stroke-width="40"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                          data-original="#000000"
+                          class=""
+                        ></circle>
+                        <circle
+                          cx="256"
+                          cy="60"
+                          r="40"
+                          style="
+                            stroke-width: 40;
+                            stroke-linecap: round;
+                            stroke-linejoin: round;
+                            stroke-miterlimit: 10;
+                          "
+                          fill="none"
+                          stroke="#000000"
+                          stroke-width="40"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                          data-original="#000000"
+                          class=""
+                        ></circle>
+                        <circle
+                          cx="60"
+                          cy="60"
+                          r="40"
+                          style="
+                            stroke-width: 40;
+                            stroke-linecap: round;
+                            stroke-linejoin: round;
+                            stroke-miterlimit: 10;
+                          "
+                          fill="none"
+                          stroke="#000000"
+                          stroke-width="40"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                          data-original="#000000"
+                          class=""
+                        ></circle>
+                        <circle
+                          cx="60"
+                          cy="452"
+                          r="40"
+                          style="
+                            stroke-width: 40;
+                            stroke-linecap: round;
+                            stroke-linejoin: round;
+                            stroke-miterlimit: 10;
+                          "
+                          fill="none"
+                          stroke="#000000"
+                          stroke-width="40"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                          data-original="#000000"
+                          class=""
+                        ></circle>
+                        <circle
+                          cx="256"
+                          cy="452"
+                          r="40"
+                          style="
+                            stroke-width: 40;
+                            stroke-linecap: round;
+                            stroke-linejoin: round;
+                            stroke-miterlimit: 10;
+                          "
+                          fill="none"
+                          stroke="#000000"
+                          stroke-width="40"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                          data-original="#000000"
+                          class=""
+                        ></circle>
+                        <path
+                          d="M452 100v112c0 22.091-17.909 40-40 40H60v160M60 252V100M256 100v312"
+                          style="
+                            stroke-width: 40;
+                            stroke-linecap: round;
+                            stroke-linejoin: round;
+                            stroke-miterlimit: 10;
+                          "
+                          fill="none"
+                          stroke="#000000"
+                          stroke-width="40"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                          data-original="#000000"
+                          class=""
+                        ></path>
+                        <circle
+                          cx="452"
+                          cy="452"
+                          r="40"
+                          style="
+                            stroke-width: 40;
+                            stroke-linecap: round;
+                            stroke-linejoin: round;
+                            stroke-miterlimit: 10;
+                          "
+                          fill="none"
+                          stroke="#000000"
+                          stroke-width="40"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                          data-original="#000000"
+                          class=""
+                        ></circle>
+                        <path
+                          d="M452 332v80"
+                          style="
+                            stroke-width: 40;
+                            stroke-linecap: round;
+                            stroke-linejoin: round;
+                            stroke-miterlimit: 10;
+                          "
+                          fill="none"
+                          stroke="#000000"
+                          stroke-width="40"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                          data-original="#000000"
+                          class=""
+                        ></path>
+                      </g>
+                    </svg>
+                  </span>
+                  <div>
+                    <p>Коробка передач</p>
+                    <b>Автомат</b>
+                  </div>
+                </div>
+                <div class="spec">
+                  <span class="icon fuel">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      version="1.1"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      width="512"
+                      height="512"
+                      x="0"
+                      y="0"
+                      viewBox="0 0 512 512"
+                      style="enable-background: new 0 0 512 512"
+                      xml:space="preserve"
+                      class=""
+                    >
+                      <g>
+                        <path
+                          d="m466.208 67.125-42.667-42.667c-4.167-4.167-10.917-4.167-15.083 0-4.167 4.167-4.167 10.917 0 15.083l35.125 35.125-35.125 35.125c-2 2-3.125 4.708-3.125 7.542v32C405.333 172.865 424.469 192 448 192v181.333c0 5.885-4.781 10.667-10.667 10.667-5.885 0-10.667-4.781-10.667-10.667V352c0-17.646-14.354-32-32-32H384V42.667C384 19.135 364.865 0 341.333 0H128c-23.531 0-42.667 19.135-42.667 42.667v384c-23.531 0-42.667 19.135-42.667 42.667v32a10.66 10.66 0 0 0 10.667 10.667H416a10.66 10.66 0 0 0 10.667-10.667v-32c0-23.531-19.135-42.667-42.667-42.667v-85.333h10.667c5.885 0 10.667 4.781 10.667 10.667v21.333c0 17.646 14.354 32 32 32s32-14.354 32-32V74.667a10.664 10.664 0 0 0-3.126-7.542zM106.667 42.667c0-11.76 9.573-21.333 21.333-21.333h213.333c11.76 0 21.333 9.573 21.333 21.333v384h-256v-384zm298.666 426.666v21.333H64v-21.333C64 457.573 73.573 448 85.333 448H384c11.76 0 21.333 9.573 21.333 21.333zM448 170.667c-11.76 0-21.333-9.573-21.333-21.333V121.75L448 100.417v70.25z"
+                          fill="#000000"
+                          opacity="1"
+                          data-original="#000000"
+                          class=""
+                        ></path>
+                        <path
+                          d="M330.667 42.667h-192A10.66 10.66 0 0 0 128 53.334v128.198a10.66 10.66 0 0 0 10.667 10.667h192a10.66 10.66 0 0 0 10.667-10.667V53.333a10.661 10.661 0 0 0-10.667-10.666zM320 170.865H149.333V64H320v106.865z"
+                          fill="#000000"
+                          opacity="1"
+                          data-original="#000000"
+                          class=""
+                        ></path>
+                      </g>
+                    </svg>
+                  </span>
+                  <div>
+                    <p>Тип топлива</p>
+                    <b>Дизель</b>
+                  </div>
+                </div>
+
+                <div class="spec">
+                  <span class="icon engine">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      version="1.1"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      width="512"
+                      height="512"
+                      x="0"
+                      y="0"
+                      viewBox="0 0 60 60"
+                      style="enable-background: new 0 0 512 512"
+                      xml:space="preserve"
+                      class=""
+                    >
+                      <g>
+                        <path
+                          d="M55 28h-2a3 3 0 0 0-3 3v1h-2v-5a3 3 0 0 0-3-3h-3a1 1 0 0 1-1-1v-2a3 3 0 0 0-3-3h-4v-3h5a3 3 0 0 0 0-6H19a3 3 0 0 0 0 6h5v3h-5a3 3 0 0 0-3 3 1 1 0 0 1-1 1h-3a3 3 0 0 0-3 3v4H6v-4a3 3 0 0 0-6 0v16a3 3 0 0 0 6 0v-4h3v5a3 3 0 0 0 3 3h4.172a1 1 0 0 1 .707.293l4.828 4.828a2.978 2.978 0 0 0 2.121.879H45a3 3 0 0 0 3-3v-4h2v1a3 3 0 0 0 3 3h2a5.006 5.006 0 0 0 5-5V33a5.006 5.006 0 0 0-5-5zM18 12a1 1 0 0 1 1-1h20a1 1 0 0 1 0 2H19a1 1 0 0 1-1-1zm8 3h6v3h-6zM4 41a1 1 0 0 1-2 0V25a1 1 0 0 1 2 0zm2-6v-4h3v4zm40 13a1 1 0 0 1-1 1H23.828a1 1 0 0 1-.707-.293l-4.828-4.828A2.982 2.982 0 0 0 16.172 43H12a1 1 0 0 1-1-1V25a1 1 0 0 1 1-1h3a3 3 0 0 0 3-3 1 1 0 0 1 1-1h19a1 1 0 0 1 1 1v2a3 3 0 0 0 3 3h3a1 1 0 0 1 1 1zm2-6v-8h2v8zm10 1a3 3 0 0 1-3 3h-2a1 1 0 0 1-1-1V31a1 1 0 0 1 1-1h2a3 3 0 0 1 3 3z"
+                          fill="#000000"
+                          opacity="1"
+                          data-original="#000000"
+                          class=""
+                        ></path>
+                      </g>
+                    </svg>
+                  </span>
+                  <div>
+                    <p>Объём двигателя</p>
+                    <b>2.2 л</b>
+                  </div>
+                </div>
+                <div class="spec">
+                  <span class="icon fuel">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      data-lucide="cylinder"
+                      aria-hidden="true"
+                      class="lucide lucide-cylinder"
+                    >
+                      <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                      <path d="M3 5v14a9 3 0 0 0 18 0V5"></path>
+                    </svg>
+                  </span>
+                  <div>
+                    <p>Объём двигателя</p>
+                    <b>2.2 л</b>
+                  </div>
+                </div>
+
+                <div class="spec">
+                  <span class="icon engine">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      data-lucide="zap"
+                      aria-hidden="true"
+                      class="lucide lucide-zap"
+                    >
+                      <path
+                        d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"
+                      ></path>
+                    </svg>
+                  </span>
+                  <div>
+                    <p>Мощность</p>
+                    <b>199 л.с.</b>
+                  </div>
+                </div>
               </div>
-            </div>
 
-            <!-- CARD -->
-            <div class="service-card">
-              <div class="service-content">
-                <h4>Проверка и диагностика</h4>
-                <p>
-                  Каждый автомобиль проходит тщательную проверку: техническое
-                  состояние, наличие повреждений, история обслуживания,
-                  юридическая чистота. Мы проверяем VIN по международным базам,
-                  сканируем электронику и делаем полный фотоотчёт.
-                </p>
-
-                <a class="service-link">ПОДРОБНЕЕ →</a>
-              </div>
-
-              <div class="service-image">
-                <img src="/assests/img/s2.webp" alt="" />
-              </div>
-            </div>
-
-            <!-- CARD -->
-            <div class="service-card">
-              <div class="service-content">
-                <h4>Постановка на учёт</h4>
-                <p>
-                  Сопровождаем на всех этапах регистрации: от получения номеров
-                  до оформления ОСАГО. Помогаем пройти техосмотр и решить любые
-                  вопросы с документами. Вы получаете полностью готовый к
-                  эксплуатации автомобиль.
-                </p>
-
-                <a class="service-link">ПОДРОБНЕЕ →</a>
-              </div>
-
-              <div class="service-image">
-                <img src="/assests/img/s4.webp" alt="" />
-              </div>
-            </div>
-
-            <!-- CARD -->
-            <div class="service-card">
-              <div class="service-content">
-                <h4>Доставка и растаможка</h4>
-                <p>
-                  Организуем логистику автовозом или на платформе. Берём на себя
-                  все таможенные процедуры: подготовка документов, оплата
-                  пошлин, утилизационный сбор, получение ЭПТС. Вам не нужно
-                  беспокоиться ни о чём.
-                </p>
-
-                <a class="service-link">ПОДРОБНЕЕ →</a>
-              </div>
-
-              <div class="service-image">
-                <img src="/assests/img/s3.webp" alt="" />
-              </div>
+              <!-- BUTTON -->
+              <a href="/" class="btn-premium">
+                <span>Оставить заявку</span>
+              </a>
             </div>
           </div>
         </div>
@@ -490,8 +858,23 @@
       </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js"></script>
     <script src="/assests/main.js"></script>
+    <script>
+      function changeImage(el) {
+        const main = document.getElementById("mainImage");
+        main.src = el.src;
+
+        document.querySelector(".main-image").href = el.src;
+      }
+
+      Fancybox.bind("[data-fancybox='gallery']", {
+        Thumbs: {
+          autoStart: true,
+        },
+      });
+    </script>
     <script>
       new Swiper(".car-slider", {
         slidesPerView: 3,
